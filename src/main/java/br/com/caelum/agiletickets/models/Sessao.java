@@ -26,7 +26,7 @@ public class Sessao {
 
 	private Integer duracaoEmMinutos;
 
-	private Integer totalIngressos = 0;
+	private Integer totalIngressos;
 
 	private Integer ingressosReservados = 0;
 
@@ -91,6 +91,10 @@ public class Sessao {
 	}
 
 	public boolean podeReservar(Integer numeroDeIngressos) {
-		return getIngressosDisponiveis() >= numeroDeIngressos;
+		if (numeroDeIngressos>0) {
+      		return getIngressosDisponiveis() >= numeroDeIngressos;
+		} else {
+			return false;
+		}
 	}
 }
