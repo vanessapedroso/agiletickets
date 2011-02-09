@@ -109,4 +109,5 @@ public class EspetaculosControllerTest {
 
 		assertThat(sessao.getIngressosDisponiveis(), is(2));
 	}
+	
 }
