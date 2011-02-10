@@ -92,7 +92,7 @@ public class Espetaculo {
 			atribuiSessoes(inicio, horario, sessoes, iteracao, fatorSemanal);
 		} else {
 			iteracao = dias/7;
-			fatorSemanal = 8;
+			fatorSemanal = 7;
 			atribuiSessoes(inicio, horario, sessoes, iteracao, fatorSemanal);
 		}
 
