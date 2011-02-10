@@ -24,10 +24,11 @@ public class EspetaculoTest {
 	public void deveCriarSessoesDiarias(){
 		Espetaculo e = new Espetaculo();
 		LocalDate inicio = new LocalDate(2011,2,1);
-		LocalDate fim = new LocalDate(2011,2,2);
+		LocalDate fim = new LocalDate(2011,2,3);
 		List<Sessao> sessoes = e.criaSessoes(inicio, fim, new LocalTime(), Periodicidade.DIARIA);
 		
-		assertEquals(2, sessoes.size());
+		assertEquals(3, sessoes.size());
+		assertEquals(3, sessoes.get(2).getInicio().getDayOfMonth());
 	}
 
 	@Test
