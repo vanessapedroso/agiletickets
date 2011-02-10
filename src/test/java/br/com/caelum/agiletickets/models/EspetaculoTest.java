@@ -41,4 +41,6 @@ public class EspetaculoTest {
 		assertEquals(3, sessoes.size());
 		assertEquals(23,sessoes.get(sessoes.size()-1).getInicio().getDayOfMonth());
 	}
+	
+
 }
