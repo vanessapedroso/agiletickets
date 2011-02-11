@@ -108,4 +108,10 @@ public class Sessao {
 	public BigDecimal getPreco() {
 		return preco;
 	}
+
+	public void concedeDesconto(Estudante estudante) {
+		if (Estudante.SIM.equals(estudante)) {
+			this.preco = this.preco.multiply(new BigDecimal(0.50));			
+		}
+	}
 }

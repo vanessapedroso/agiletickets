@@ -1,5 +1,7 @@
 package br.com.caelum.agiletickets.models;
 
+import java.math.BigDecimal;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -45,6 +47,15 @@ public class SessaoTest {
 	    sessao.setTotalIngressos(1);
 	    Assert.assertFalse(sessao.podeReservar(-2));
 	    
+	}
+	
+	@Test
+	public void deveDarDescontoParaEstudante() throws Exception {
+		Sessao sessao = new Sessao();
+		sessao.setPreco(new BigDecimal(20.0));
+		sessao.concedeDesconto(Estudante.SIM);
+		
+		Assert.assertEquals(new BigDecimal(10.0), sessao.getPreco());		
 	}
 
 }
