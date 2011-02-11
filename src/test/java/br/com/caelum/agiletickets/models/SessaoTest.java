@@ -52,10 +52,10 @@ public class SessaoTest {
 	@Test
 	public void deveDarDescontoParaEstudante() throws Exception {
 		Sessao sessao = new Sessao();
-		sessao.setPreco(new BigDecimal(20.0));
+		sessao.setPreco(new BigDecimal(20));
 		sessao.concedeDesconto(Estudante.SIM);
 		
-		Assert.assertEquals(new BigDecimal(10.0), sessao.getPreco());		
+		Assert.assertEquals(new BigDecimal(10), sessao.getPreco());		
 	}
 
 }
